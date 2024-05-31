@@ -1,0 +1,6 @@
+{
+    "project_name": "Your project name, e.g. ml-training",
+    "project_slug": "{{ cookiecutter.project_name }}",
+    "author_name": "Your name",
+    "description": "Your project description"
+}
