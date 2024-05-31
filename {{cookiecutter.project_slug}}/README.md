@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Summary](#summary)
-- [Reference](#reference)
+- [References](#references)
 - [Folder Structure](#folder-structure)
 - [Getting Started](#getting-started)
 
