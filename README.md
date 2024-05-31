@@ -17,4 +17,4 @@ Install Cookiecutter by running `pip install cookiecutter`.
 
 ### Generate a New Project from the Template
 
-Run `cookiecutter https://github.com/MGTheTrain/python-ml-training-starter.git`
+Run `cookiecutter https://github.com/MGTheTrain/python-machine-learning-starter.git`
