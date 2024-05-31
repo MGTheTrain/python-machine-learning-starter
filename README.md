@@ -7,7 +7,7 @@
 
 ## Summary
 
-python-ml-training-starter is a comprehensive template designed to kickstart your machine learning training projects in Python
+Template designed to kickstart your machine learning training projects in Python
 
 ## Getting Started
 
