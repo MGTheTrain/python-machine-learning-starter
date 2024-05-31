@@ -1,4 +1,4 @@
-# python-ml-training-starter
+# python-machine-learning-starter
 
 ## Table of Contents
 
@@ -7,7 +7,7 @@
 
 ## Summary
 
-Template designed to kickstart your machine learning training projects in Python
+Template designed to kickstart your machine learning projects in Python
 
 ## Getting Started
 
