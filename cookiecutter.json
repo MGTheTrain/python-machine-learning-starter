@@ -1,5 +1,5 @@
 {
-    "project_name": "Your project name, e.g. ml-training",
+    "project_name": "Your project name, e.g. ml-project-ngl",
     "project_slug": "{{ cookiecutter.project_name }}",
     "author_name": "Your name",
     "data_set_name": "Your date set name, e.g. MNIST or COCO",
