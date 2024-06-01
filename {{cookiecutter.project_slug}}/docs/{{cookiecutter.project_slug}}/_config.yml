@@ -13,3 +13,6 @@ github_username:  jekyll
 theme: just-the-docs
 plugins:
   - jekyll-feed
+
+# color_scheme: dark
+color_scheme: custom
