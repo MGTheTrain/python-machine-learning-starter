@@ -23,6 +23,7 @@ clean:
 	rm -rf $(SRC_DIR)/__pycache__
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
+	echo "Manually clean contents in data and models dir"  
 
 # Model training
 train:
