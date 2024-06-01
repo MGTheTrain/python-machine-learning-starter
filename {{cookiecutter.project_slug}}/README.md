@@ -95,6 +95,24 @@ python main.py --mode inference
 make inference
 ```
 
+### Run pytests
+
+To run all tests:
+
+```sh
+pytest
+# or
+make test
+```
+
+To run an individual test:
+
+```sh
+pytest tests/<filename, e.g. test_model.py>
+# or
+make test-individual filename=test_model.py
+```
+
 ### Generating project documentation
 
 Run:
