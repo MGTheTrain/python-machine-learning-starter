@@ -55,23 +55,57 @@ project_root/
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project README file
 ├── Dockerfile              # Enables training in an isolated docker container
-└── main.py                 # Main entry point script for running the application
+├── Makefile                # Entrypoint enabling useful commands
+├── docs                    # Project documentation
+├── scripts                 # Helper scripts
+└── main.py                 # Entry point script for executing model training or inference
 ```
 
 ## Getting started
+
+### Preconditions
+
+- Preferably use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container
+- Install pip packages. Therefore run:
+
+```sh
+pip install -r requirements.txt
+# or
+make setup
+```
 
 ### Training the model from the dataset
 
 Run:
 
 ```sh
- python main.py --mode train
- ```
+python main.py --mode train
+# or
+make train
+```
 
- ### Model inference
+### Model inference
 
 Run:
 
- ```sh
- python main.py --mode inference
- ```
+```sh
+python main.py --mode inference
+# or
+make inference
+```
+
+### Generating project documentation
+
+Run:
+
+```sh
+make docs
+```
+
+### Clearing artifacts
+
+Run:
+
+```sh
+make clean
+```
