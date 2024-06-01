@@ -21,7 +21,9 @@ clean:
 	rm -rf $(DOCS_DIR)/_build
 	rm -rf $(SRC_DIR)/*.pyc
 	rm -rf $(SRC_DIR)/__pycache__
+	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
+	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
 
 # Build and serve documentation
 docs:
-	cd docs && jekyll serve && echo "Visit in a browser of choice localhost:4000"
+	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
