@@ -103,6 +103,16 @@ Run:
 make docs
 ```
 
+### Auto-format and lint python files
+
+Run:
+
+```sh
+make format
+```
+
+Optionally it is recommended to set up a symbolic link and a validation automation workflow to ensure that the `format.sh` script is executed with each commit.
+
 ### Clearing artifacts
 
 Run:
