@@ -7,7 +7,7 @@ DOCS_DIR = docs
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup clean train inference docs
+.PHONY: all setup clean train inference docs format
 
 # Default target
 all: setup docs
@@ -36,3 +36,6 @@ inference:
 # Build and serve documentation
 docs:
 	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
+
+format:
+	cd scripts && ./format_and_lint.sh
