@@ -1,6 +1,6 @@
 # NOTE: Requires dvc tool. Directory for storing experiment configurations, results, and logs
 
-In this belows commands, DVC is used to track changes to data and model files. 
+In belows commands, DVC is used to track changes to data and model files. 
 DVC adds data and model files to the DVC repository, and Git is used to version control the DVC metafiles (*.dvc). 
 DVC push pushes the tracked files to the remote storage, enabling versioning and sharing of data and models across collaborators.
 ```sh
