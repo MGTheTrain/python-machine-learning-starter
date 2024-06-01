@@ -4,10 +4,11 @@ PIP = pip3
 
 # Directories
 DOCS_DIR = docs
+TEST_DIR = tests
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup test clean train inference docs format
+.PHONY: all setup test test-individual clean train inference docs format
 
 # Default target
 all: setup docs
@@ -18,7 +19,14 @@ setup:
 
 # Run pytests
 test:
-	pytest 
+	pytest
+
+test-individual:
+	@if [ -z "$(filename)" ]; then \
+		echo "Please provide a filename in the test folder using 'make test-individual filename=<e.g. test_model.py>'"; \
+	else \
+		pytest tests $(TEST_DIR)/$(filename); \
+	fi
 
 # Clean up generated files
 clean:
