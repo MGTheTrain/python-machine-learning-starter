@@ -13,7 +13,7 @@ NC='\033[0m'
 echo "#####################################################################################################"
 echo -e "$BLUE INFO: $NC About to apply linting on and auto-format python files"
 
-blake .
+black .
 flake8 .
 
 cd -
