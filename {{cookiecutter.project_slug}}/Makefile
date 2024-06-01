@@ -17,7 +17,7 @@ all: setup docs
 setup:
 	$(PIP) install -r requirements.txt
 
-# Run pytests
+# Run pytests (will also consider code coverage report generation)
 test:
 	pytest --cov --cov-report=xml --cov-report=term
 
