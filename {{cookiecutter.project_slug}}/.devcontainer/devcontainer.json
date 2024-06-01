@@ -6,6 +6,7 @@
     // More information on features can be found @ https://containers.dev/features
     "features": {
       "ghcr.io/devcontainers/features/python:1": {}
-    }
+    },
+    "postCreateCommand": "gem install jekyll bundler"
   }
   
