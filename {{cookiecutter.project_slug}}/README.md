@@ -46,6 +46,11 @@ project_root/
 │   ├── inference.py        # Inference script for testing the saved model
 │   └── utils.py            # Utility functions
 │
+├── tests/                  # Test directory
+│   ├── test_model.py       
+│   ├── data_loader.py      
+│   ├── ...      
+|
 ├── experiments/            # NOTE: Requires dvc tool. Directory for storing experiment configurations, results, and logs
 │   ├── experiment_1/       # Store experiment-specific files and data here
 │   │   ├── config.yaml     # Configuration file for experiment 1
