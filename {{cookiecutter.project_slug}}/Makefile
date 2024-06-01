@@ -19,13 +19,13 @@ setup:
 
 # Run pytests
 test:
-	pytest
+	pytest --cov --cov-report=xml --cov-report=term
 
 test-individual:
 	@if [ -z "$(filename)" ]; then \
 		echo "Please provide a filename in the test folder using 'make test-individual filename=<e.g. test_model.py>'"; \
 	else \
-		pytest tests $(TEST_DIR)/$(filename); \
+		pytest --cov --cov-report=xml --cov-report=term $(TEST_DIR)/$(filename); \
 	fi
 
 # Clean up generated files
