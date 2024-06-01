@@ -66,7 +66,7 @@ project_root/
 
 ### Preconditions
 
-- Preferably use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container
+- It's preferable to employ a Unix environment (MacOS, Linux Ubuntu, Linux Debian) and install all necessary packages as demonstrated in the example [devcontainer.json](./.devcontainer/devcontainer.json). Optionally use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container. This is beneficial for generating project documentation based on Jekyll
 - Install pip packages. Therefore run:
 
 ```sh
