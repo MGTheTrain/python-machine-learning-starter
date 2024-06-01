@@ -6,6 +6,7 @@
 - [References](#references)
 - [Folder Structure](#folder-structure)
 - [Getting Started](#getting-started)
+- [Author](#author)
 
 ## Summary
 
@@ -109,3 +110,7 @@ Run:
 ```sh
 make clean
 ```
+
+## Author
+
+{{ cookiecutter.author_name }}
