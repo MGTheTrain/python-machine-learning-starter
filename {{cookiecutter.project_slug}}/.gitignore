@@ -141,3 +141,12 @@ experiments/.gitignore
 
 # Data versioning control directories (e.g., DVC)
 .data.dvc/
+
+# Jekyll
+_site/
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Mac OS
+.DS_Store
