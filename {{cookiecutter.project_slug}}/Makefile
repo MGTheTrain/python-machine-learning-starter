@@ -7,7 +7,7 @@ DOCS_DIR = docs
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup clean train inference docs format
+.PHONY: all setup test clean train inference docs format
 
 # Default target
 all: setup docs
@@ -15,6 +15,10 @@ all: setup docs
 # Setup the environment
 setup:
 	$(PIP) install -r requirements.txt
+
+# Run pytests
+test:
+	pytest 
 
 # Clean up generated files
 clean:
