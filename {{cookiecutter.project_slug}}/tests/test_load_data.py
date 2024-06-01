@@ -1,6 +1,7 @@
 import unittest
 from src.data_loader import load_data
 
+
 class TestLoadData(unittest.TestCase):
     def test_load_data(self):
         (x_train, y_train), (x_test, y_test) = load_data()
@@ -14,6 +15,7 @@ class TestLoadData(unittest.TestCase):
         # Check data normalization
         self.assertTrue((x_train >= 0).all() and (x_train <= 1).all())
         self.assertTrue((x_test >= 0).all() and (x_test <= 1).all())
+
 
 if __name__ == "__main__":
     unittest.main()

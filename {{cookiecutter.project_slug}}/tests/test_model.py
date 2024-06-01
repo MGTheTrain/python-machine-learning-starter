@@ -1,6 +1,6 @@
-import pytest
 from tensorflow.keras import layers, models
 from src.model import build_model
+
 
 def test_build_model():
     model = build_model()
