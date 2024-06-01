@@ -7,7 +7,7 @@ DOCS_DIR = docs
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup clean docs
+.PHONY: all setup clean train inference docs
 
 # Default target
 all: setup docs
@@ -23,6 +23,14 @@ clean:
 	rm -rf $(SRC_DIR)/__pycache__
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
+
+# Model training
+train:
+	$(PYTHON) main.py --mode train
+
+# Model inference
+inference:
+	$(PYTHON) main.py --mode inference
 
 # Build and serve documentation
 docs:
