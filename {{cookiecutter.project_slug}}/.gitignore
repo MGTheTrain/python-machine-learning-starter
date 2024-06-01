@@ -56,7 +56,6 @@ docs/_doxygen/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
 
 # pyenv
 .python-version
@@ -97,34 +96,23 @@ dmypy.json
 cython_debug/
 
 # Data directories
-data/
 data/raw/
 data/processed/
 data/interim/
 data/external/
 
 # Model directories
-models/
 models/saved_models/
 models/trained_models/
 
 # DVC specific files
-.dvc/
 *.dvc
 .cache/
 
 # Experiments directories
-experiments/
 experiments/.dvc/
 experiments/.dvcignore
 experiments/.gitignore
-
-# VS Code settings
-.vscode/
-
-# Docker files
-Dockerfile
-*.dockerignore
 
 # Logs
 *.log
@@ -152,5 +140,4 @@ Dockerfile
 *.pdb
 
 # Data versioning control directories (e.g., DVC)
-.data/
 .data.dvc/
