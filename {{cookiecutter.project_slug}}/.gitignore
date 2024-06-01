@@ -106,7 +106,6 @@ models/saved_models/
 models/trained_models/
 
 # DVC specific files
-*.dvc
 .cache/
 
 # Experiments directories

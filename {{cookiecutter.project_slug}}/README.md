@@ -31,12 +31,12 @@ Share experiments and automatically reproduce anyone's experiment."
 ```sh
 project_root/
 │
-├── data/                   # Directory for storing datasets. NOTE: It is recommended to use an external BLOB storage for managing data to maintain a lean GitHub repository.
+├── data/                   # Directory for storing datasets. NOTE: It is recommended to use an external BLOB storage for managing data to maintain a lean GitHub repository. Hence the dvc tool proves to be useful.
 │   └── dataset/
 │       └── ...
 │
 ├── models/                 # Directory for storing trained models. 
-│   └── saved_models/       # NOTE: It is recommended to use an external BLOB storage for managing models to maintain a lean GitHub repository.
+│   └── saved_models/       # NOTE: It is recommended to use an external BLOB storage for managing models to maintain a lean GitHub repository. Hence the dvc tool proves to be useful.
 │       └── ...
 │
 ├── src/                    # Source code directory
