@@ -16,4 +16,7 @@ echo -e "$BLUE INFO: $NC About to apply linting on and auto-format python files"
 black .
 flake8 .
 
+# yml formatter
+# jekyll formatter
+
 cd -
