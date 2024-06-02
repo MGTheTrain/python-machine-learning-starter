@@ -14,6 +14,7 @@ Template designed to kickstart your machine learning projects in Python
 ### Preconditions
 
 Install Cookiecutter by running `pip install cookiecutter`.
+Optionally utilize an OS-specific package manager such as `brew`, `choco` or `apt`.
 
 ### Generate a New Project from the Template
 
