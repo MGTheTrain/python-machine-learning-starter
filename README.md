@@ -20,7 +20,7 @@ On MacOS optionally utilize the [homebrew package manager](https://cookiecutter.
 
 ### From the main branch
 
-Run `cookiecutter https://github.com/MGTheTrain/python-machine-learning-starter.git`
+Run `cookiecutter https://github.com/MGTheTrain/python-machine-learning-starter.git`. On MacOS optionally utilize the [homebrew package manager](https://cookiecutter.readthedocs.io/en/stable/installation.html) with `brew install cookiecutter`.
 
 ### From release/x.y.z branches
 
