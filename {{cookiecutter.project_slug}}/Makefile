@@ -8,7 +8,7 @@ TEST_DIR = tests
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup test test-individual clean train inference docs format
+.PHONY: all setup test test-individual clean train inference docs format-and-lint
 
 # Default target
 all: setup docs
@@ -49,5 +49,5 @@ inference:
 docs:
 	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
 
-format:
+format-and-lint:
 	cd scripts && ./format_and_lint.sh
