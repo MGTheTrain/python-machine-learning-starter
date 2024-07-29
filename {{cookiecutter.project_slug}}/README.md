@@ -40,11 +40,32 @@ project_root/
 │       └── ...
 │
 ├── src/                    # Source code directory
-│   ├── data_loader.py      # Data loading utilities. Load the dataset from the specified directory (data/ in this case) or from external sources like databases or APIs
-│   ├── model.py            # Model architecture definition
-│   ├── train.py            # Training script saving trained model
-│   ├── inference.py        # Inference script for testing the saved model
-│   └── utils.py            # Utility functions
+│   ├── __init__.py
+│   ├── data_loaders        # Data loading utilities. Load the dataset from the specified directory (data/ in this case) or from external sources like databases or APIs
+│   │   ├── __init__.py
+│   │   ├── data_loader_interface.py
+│   │   └── mnist_data_loader.py
+│   │   └── ...
+│   ├── inferences          # Inference scripts for testing the saved model
+│   │   ├── inference_interface.py
+│   │   └── mnist_inference.py
+│   │   └── ...
+│   ├── models              # Model architecture definition
+│   │   ├── __init__.py
+│   │   ├── model_builder_interface.py
+│   │   └── simple_model_builder.py
+│   │   └── ...
+│   ├── training            # Training scripts saving trained model
+│   │   ├── __init__.py
+│   │   ├── mnist_training.py
+│   │   └── training_interface.py
+│   │   └── ...
+│   └── utils
+│       ├── __init__.py
+│       └── utils.py
+│       └── ...
+│   ├── main.py             # Entry point script for executing model training or inference
+│   ├── ...                 # Other entrypoint scripts
 │
 ├── tests/                  # Test directory
 │   ├── test_model.py       
@@ -85,6 +106,7 @@ make setup
 Run:
 
 ```sh
+cd src 
 python main.py --mode train
 # or
 make train
@@ -95,9 +117,10 @@ make train
 Run:
 
 ```sh
+cd src
 python main.py --mode inference
 # or
-make inference
+make infer
 ```
 
 ### Run pytests
