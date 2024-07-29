@@ -7,7 +7,7 @@ from inferences.inference_interface import InferenceInterface
 class MNISTInference(InferenceInterface):
     def infer(self):
         # Load saved model
-        model_path = os.path.join("models", "mnist_model.h5")
+        model_path = os.path.join("../models", "mnist_model.h5")
         model = load_model(model_path)
 
         # Load data for inference
