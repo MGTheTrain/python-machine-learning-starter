@@ -96,8 +96,6 @@ project_root/
 - Install pip packages. Therefore run:
 
 ```sh
-pip install -r requirements.txt
-# or
 make setup
 ```
 
@@ -110,18 +108,12 @@ make format-and-lint
 ### Training the model from the dataset
 
 ```sh
-cd src 
-python main.py --mode train
-# or
 make train
 ```
 
 ### Model inference
 
 ```sh
-cd src
-python main.py --mode inference
-# or
 make infer
 ```
 
@@ -130,16 +122,12 @@ make infer
 To run all tests:
 
 ```sh
-pytest
-# or
 make test
 ```
 
 To run an individual test:
 
 ```sh
-pytest tests/<filename, e.g. test_model.py>
-# or
 make test-individual filename=test_model.py
 ```
 
