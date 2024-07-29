@@ -31,19 +31,21 @@ test-individual:
 # Clean up generated files
 clean:
 	rm -rf $(DOCS_DIR)/_build
-	rm -rf $(SRC_DIR)/*.pyc
-	rm -rf $(SRC_DIR)/__pycache__
+	find . -type d -name '*.pyc' -exec rm -rf {} +
+	find . -type d -name '__pycache__' -exec rm -rf {} +
+	find . -type d -name '.pytest_cache' -exec rm -rf {} +
+	rm -rf .coverage coverage.xml 
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
 	echo "Manually clean contents in data and models dir"  
 
 # Model training
 train:
-	$(PYTHON) main.py --mode train
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode train
 
 # Model inference
 inference:
-	$(PYTHON) main.py --mode inference
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference
 
 # Build and serve documentation
 docs:
