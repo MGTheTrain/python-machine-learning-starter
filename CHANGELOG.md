@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Increase modularity by modifying project structure considering interfaces and classes
+- Add a key-value in [cookiecutter.json](./cookiecutter.json) to select between Pytorch or Tensforflow setup 
 
 ## [0.1.0] - 01-06-2024
 

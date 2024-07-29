@@ -1,2 +1,10 @@
+{% if cookiecutter.ml_framework == 'tensorflow' %}
 tensorflow
 numpy
+{% elif cookiecutter.ml_framework == 'pytorch' %}
+pytorch
+torchvision
+numpy
+{% else %}
+
+{% endif %}

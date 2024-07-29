@@ -12,7 +12,7 @@
 
 {{ cookiecutter.description }}
 
-**NOTE:** The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing Keras with the MNIST dataset.
+**NOTE:** The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing Keras or Pytorch with the MNIST dataset.
 
 ## References
 
