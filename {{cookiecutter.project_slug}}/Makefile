@@ -19,13 +19,13 @@ setup:
 
 # Run pytests (will also consider code coverage report generation)
 test:
-	pytest --cov --cov-report=xml --cov-report=term
+	PYTHONPATH=src pytest --cov --cov-report=xml --cov-report=term
 
 test-individual:
 	@if [ -z "$(filename)" ]; then \
 		echo "Please provide a filename in the test folder using 'make test-individual filename=<e.g. test_model.py>'"; \
 	else \
-		pytest --cov --cov-report=xml --cov-report=term $(TEST_DIR)/$(filename); \
+		PYTHONPATH=src pytest --cov --cov-report=xml --cov-report=term $(TEST_DIR)/$(filename); \
 	fi
 
 # Clean up generated files
@@ -44,7 +44,7 @@ train:
 	cd $(SRC_DIR) && $(PYTHON) main.py --mode train
 
 # Model inference
-inference:
+infer:
 	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference
 
 # Build and serve documentation
