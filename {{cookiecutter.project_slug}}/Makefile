@@ -8,14 +8,18 @@ TEST_DIR = tests
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup test test-individual clean train inference docs format-and-lint
+.PHONY: all setup test test-individual clean train infer docs format-and-lint
 
 # Default target
 all: setup docs
 
 # Setup the environment
 setup:
-	$(PIP) install -r requirements.txt
+	@if [ -z "$(requirements_file)" ]; then \
+		echo "Please provide a requirements_file using 'make setup requirements_file=<e.g. requirements.tf.txt or requirements.pt.txt>'"; \
+	else \
+		$(PIP) install -r $(requirements_file); \
+	fi
 
 # Run pytests (will also consider code coverage report generation)
 test:
@@ -35,9 +39,9 @@ clean:
 	find . -type d -name '__pycache__' -exec rm -rf {} +
 	find . -type d -name '.pytest_cache' -exec rm -rf {} +
 	rm -rf .coverage coverage.xml 
-	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
-	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
-	echo "Manually clean contents in data and models dir"  
+	rm -rf $(DOCS_DIR)/{{cookiecutter.project_slug}}/_site
+	rm -rf $(DOCS_DIR)/{{cookiecutter.project_slug}}/.jekyll-cache
+	echo "Manually clean contents in data and models dir"
 
 # Model training
 train:
@@ -49,7 +53,7 @@ infer:
 
 # Build and serve documentation
 docs:
-	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
+	cd $(DOCS_DIR)/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
 
 format-and-lint:
 	cd scripts && ./format_and_lint.sh

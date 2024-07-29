@@ -79,7 +79,8 @@ project_root/
 │   │   └── logs/           # Logs generated during experiment 1
 │   └── ...                 # Additional experiment directories
 │
-├── requirements.txt        # Python dependencies
+├── requirements.pt.txt     # Pytorch python dependencies
+├── requirements.tf.txt     # Tensorflow python dependencies
 ├── README.md               # Project README file
 ├── Dockerfile              # Enables training in an isolated docker container
 ├── Makefile                # Entrypoint enabling useful commands
@@ -96,9 +97,9 @@ project_root/
 - Install pip packages. Therefore run:
 
 ```sh
-pip install -r requirements.txt
+pip install -r <requirements.pt.txt or requirements.tf.txt>
 # or
-make setup
+make setup requirements_file=<requirements.pt.txt or requirements.tf.txt>
 ```
 
 ### Training the model from the dataset
