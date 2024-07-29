@@ -4,6 +4,7 @@ from tensorflow.keras.models import load_model
 from data_loaders.mnist_data_loader import MNISTDataLoader
 from inferences.inference_interface import InferenceInterface
 
+
 class MNISTInference(InferenceInterface):
     def infer(self):
         # Load saved model

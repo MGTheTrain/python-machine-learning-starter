@@ -1,6 +1,7 @@
 from data_loaders.data_loader_interface import DataLoaderInterface
 import tensorflow as tf
 
+
 class MNISTDataLoader(DataLoaderInterface):
     def load_data(self):
         # Load MNIST dataset

@@ -1,6 +1,7 @@
 from tensorflow.keras import layers, models
 from models.model_builder_interface import ModelBuilderInterface
 
+
 class SimpleModelBuilder(ModelBuilderInterface):
     def build_model(self):
         model = models.Sequential(

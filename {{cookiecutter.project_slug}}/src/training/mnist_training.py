@@ -3,6 +3,7 @@ from data_loaders.mnist_data_loader import MNISTDataLoader
 from models.simple_model_builder import SimpleModelBuilder
 from training.training_interface import TrainingInterface
 
+
 class MNISTTraining(TrainingInterface):
     def train(self):
         # Load data
@@ -17,7 +18,7 @@ class MNISTTraining(TrainingInterface):
         model.compile(
             optimizer="adam",
             loss="sparse_categorical_crossentropy",
-            metrics=["accuracy"]
+            metrics=["accuracy"],
         )
 
         # Train model using training data
