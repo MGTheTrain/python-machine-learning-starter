@@ -1,10 +1,11 @@
 import unittest
-from src.data_loader import load_data
+from src.data_loaders.mnist_data_loader import MNISTDataLoader
 
 
 class TestLoadData(unittest.TestCase):
     def test_load_data(self):
-        (x_train, y_train), (x_test, y_test) = load_data()
+        data_loader = MNISTDataLoader()
+        (x_train, y_train), (x_test, y_test) = data_loader.load_data()
 
         # Check data shapes
         self.assertEqual(x_train.shape, (60000, 28, 28, 1))

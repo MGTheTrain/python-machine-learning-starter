@@ -1,5 +1,6 @@
 import argparse
-from src import train, inference
+from training.mnist_training import MNISTTraining
+from inferences.mnist_inference import MNISTInference
 
 
 def main():
@@ -14,9 +15,11 @@ def main():
     args = parser.parse_args()
 
     if args.mode == "train":
-        train.main()
+        mnist_training = MNISTTraining()
+        mnist_training.train()
     elif args.mode == "inference":
-        inference.main()
+        mnist_inference = MNISTInference()
+        mnist_inference.infer()
 
 
 if __name__ == "__main__":

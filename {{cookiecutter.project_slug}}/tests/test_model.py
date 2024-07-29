@@ -1,9 +1,10 @@
 from tensorflow.keras import layers, models
-from src.model import build_model
+from src.models.simple_model_builder import SimpleModelBuilder
 
 
 def test_build_model():
-    model = build_model()
+    simple_model_builder = SimpleModelBuilder()
+    model = simple_model_builder.build_model()
     assert isinstance(model, models.Sequential)
     assert len(model.layers) == 3
     assert isinstance(model.layers[0], layers.Flatten)
