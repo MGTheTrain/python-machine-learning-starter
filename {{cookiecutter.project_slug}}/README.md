@@ -101,9 +101,13 @@ pip install -r requirements.txt
 make setup
 ```
 
-### Training the model from the dataset
+- Consider initial auto-formatting. Therefore run: 
 
-Run:
+```sh
+make format-and-lint
+```
+
+### Training the model from the dataset
 
 ```sh
 cd src 
@@ -113,8 +117,6 @@ make train
 ```
 
 ### Model inference
-
-Run:
 
 ```sh
 cd src
@@ -143,15 +145,11 @@ make test-individual filename=test_model.py
 
 ### Generating project documentation
 
-Run:
-
 ```sh
 make docs
 ```
 
 ### Auto-format and lint python files
-
-Run:
 
 ```sh
 make format-and-lint
@@ -160,8 +158,6 @@ make format-and-lint
 **NOTE:** Optionally it is recommended to set up a symbolic link via `cd .git/hooks && ln -s ../../scripts/format_and_lint.sh pre-commit && sudo chmod +x pre-commit && cd -` and a validation automation workflow to ensure that the `format_and_lint.sh` script is executed with each commit.
 
 ### Clearing artifacts
-
-Run:
 
 ```sh
 make clean
