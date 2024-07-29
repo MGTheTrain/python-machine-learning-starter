@@ -12,7 +12,12 @@
 
 {{ cookiecutter.description }}
 
-**NOTE:** The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing {{ cookiecutter.ml_framework }} with the MNIST dataset.
+**NOTE:** 
+
+- The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing {{ cookiecutter.ml_framework }} with the MNIST dataset.
+{% if cookiecutter.ml_framework == 'pytorch' %}
+- [Currently, PyTorch on Windows only supports Python 3.8-3.11; Python 2.x is not supported](https://pytorch.org/get-started/locally/)
+{% endif %}
 
 ## References
 
