@@ -12,7 +12,12 @@
 
 {{ cookiecutter.description }}
 
-**NOTE:** The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing Keras with the MNIST dataset.
+**NOTE:** 
+
+- The content within the Python files in the [src folder](./src/) can be replaced. Initially model training and inference is showcased utilizing {{ cookiecutter.ml_framework }} with the MNIST dataset.
+{% if cookiecutter.ml_framework == 'pytorch' %}
+- [Currently, PyTorch on Windows only supports Python 3.8-3.11; Python 2.x is not supported](https://pytorch.org/get-started/locally/)
+{% endif %}
 
 ## References
 
@@ -93,34 +98,28 @@ project_root/
 
 ### Preconditions
 
-- It's preferable to employ a Unix environment (MacOS, Linux Ubuntu, Linux Debian) and install all necessary packages as demonstrated in the example [devcontainer.json](./.devcontainer/devcontainer.json). Optionally use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container. This is beneficial for generating project documentation based on Jekyll
+- Preferably utilize the [devcontainer.json](./.devcontainer/devcontainer.json). Therefore use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to setup the development container
 - Install pip packages. Therefore run:
 
 ```sh
-pip install -r <requirements.pt.txt or requirements.tf.txt>
-# or
-make setup requirements_file=<requirements.pt.txt or requirements.tf.txt>
+make setup
+```
+
+- Consider initial auto-formatting. Therefore run: 
+
+```sh
+make format-and-lint
 ```
 
 ### Training the model from the dataset
 
-Run:
-
 ```sh
-cd src 
-python main.py --mode train
-# or
 make train
 ```
 
 ### Model inference
 
-Run:
-
 ```sh
-cd src
-python main.py --mode inference
-# or
 make infer
 ```
 
@@ -129,30 +128,22 @@ make infer
 To run all tests:
 
 ```sh
-pytest
-# or
 make test
 ```
 
 To run an individual test:
 
 ```sh
-pytest tests/<filename, e.g. test_model.py>
-# or
 make test-individual filename=test_model.py
 ```
 
 ### Generating project documentation
-
-Run:
 
 ```sh
 make docs
 ```
 
 ### Auto-format and lint python files
-
-Run:
 
 ```sh
 make format-and-lint
@@ -161,8 +152,6 @@ make format-and-lint
 **NOTE:** Optionally it is recommended to set up a symbolic link via `cd .git/hooks && ln -s ../../scripts/format_and_lint.sh pre-commit && sudo chmod +x pre-commit && cd -` and a validation automation workflow to ensure that the `format_and_lint.sh` script is executed with each commit.
 
 ### Clearing artifacts
-
-Run:
 
 ```sh
 make clean

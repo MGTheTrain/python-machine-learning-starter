@@ -5,7 +5,7 @@ from inferences.mnist_inference import MNISTInference
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Train or perform inference with the {{cookiecutter.data_set_name}} model"
+        description="Train or perform inference"
     )
     parser.add_argument(
         "--mode",

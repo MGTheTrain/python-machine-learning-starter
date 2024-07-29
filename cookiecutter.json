@@ -2,6 +2,6 @@
     "project_name": "Your project name, e.g. ml-project-ngl",
     "project_slug": "{{ cookiecutter.project_name }}",
     "author_name": "Your name",
-    "data_set_name": "Your date set name, e.g. MNIST or COCO",
+    "ml_framework": "tensorflow or pytorch",
     "description": "Your project description"
 }
