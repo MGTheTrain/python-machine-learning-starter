@@ -29,8 +29,8 @@ class MNISTInference(InferenceInterface):
 import os
 import numpy as np
 import torch
-from data_loaders.mnist_data_loader_pt import MNISTDataLoader
-from models.simple_model_builder_pt import SimpleModelBuilder
+from data_loaders.mnist_data_loader import MNISTDataLoader
+from models.simple_model_builder import SimpleModelBuilder
 from inferences.inference_interface import InferenceInterface
 
 class MNISTInference(InferenceInterface):
