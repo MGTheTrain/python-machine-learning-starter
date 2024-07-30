@@ -22,7 +22,7 @@ class TestLoadData(unittest.TestCase):
 {% elif cookiecutter.ml_framework == 'pytorch' %}
 
 import unittest
-from src.data_loaders.mnist_data_loader_pt import MNISTDataLoader
+from src.data_loaders.mnist_data_loader import MNISTDataLoader
 
 class TestLoadData(unittest.TestCase):
     def test_load_data(self):

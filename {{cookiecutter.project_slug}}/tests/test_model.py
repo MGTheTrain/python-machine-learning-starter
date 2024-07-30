@@ -19,7 +19,7 @@ def test_build_model():
 {% elif cookiecutter.ml_framework == 'pytorch' %}
 
 import torch
-from src.models.simple_model_builder_pt import SimpleModelBuilder
+from src.models.simple_model_builder import SimpleModelBuilder
 
 def test_build_model():
     simple_model_builder = SimpleModelBuilder()

@@ -38,8 +38,8 @@ import os
 import torch
 import torch.optim as optim
 import torch.nn as nn
-from data_loaders.mnist_data_loader_pt import MNISTDataLoader
-from models.simple_model_builder_pt import SimpleModelBuilder
+from data_loaders.mnist_data_loader import MNISTDataLoader
+from models.simple_model_builder import SimpleModelBuilder
 from training.training_interface import TrainingInterface
 
 class MNISTTraining(TrainingInterface):
