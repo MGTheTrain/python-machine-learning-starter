@@ -26,13 +26,24 @@ def test_build_model():
     model = simple_model_builder.build_model()
     
     assert isinstance(model, torch.nn.Module)
-    assert len(list(model.children())) == 3  # Assuming you have a Flatten layer
+    children = list(model.children())
     
-    assert isinstance(model[0], torch.nn.Flatten)
-    assert isinstance(model[1], torch.nn.Linear)
-    assert isinstance(model[2], torch.nn.Linear)
-    assert model[1].out_features == 128
-    assert model[2].out_features == 10
-    assert isinstance(model[2].activation, torch.nn.Softmax)  # Adjust according to actual implementation
+    # Verify the number of layers
+    assert len(children) == 5  # Flatten, Linear, ReLU, Linear, Softmax
+    
+    # Verify types of layers
+    assert isinstance(children[0], torch.nn.Flatten)
+    assert isinstance(children[1], torch.nn.Linear)
+    assert isinstance(children[2], torch.nn.ReLU)
+    assert isinstance(children[3], torch.nn.Linear)
+    assert isinstance(children[4], torch.nn.Softmax)
+    
+    # Verify the properties of the linear layers
+    assert children[1].out_features == 128
+    assert children[3].out_features == 10
+
+if __name__ == "__main__":
+    test_build_model()
+    print("All tests passed!")
 
 {% endif %}
