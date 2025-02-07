@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 07-02-2025
+
+### Fixed
+
+- Ensured correct `torch` pip package is installed
+
 ## [0.2.0] - 29-07-2024
 
 ### Updated
