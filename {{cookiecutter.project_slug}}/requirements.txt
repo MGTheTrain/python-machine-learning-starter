@@ -2,7 +2,7 @@
 tensorflow
 numpy
 {% elif cookiecutter.ml_framework == 'pytorch' %}
-pytorch
+torch
 torchvision
 numpy
 {% else %}
