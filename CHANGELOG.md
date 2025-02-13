@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 13-02-2025
+
 ### Updated
 
 - Renamed files and methods in the Python `src` directory. Refactored method scopes to accept datasets and models as input arguments for training and inference
