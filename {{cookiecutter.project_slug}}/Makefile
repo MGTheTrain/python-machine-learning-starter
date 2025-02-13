@@ -41,11 +41,11 @@ clean:
 
 # Model training
 train:
-	cd $(SRC_DIR) && $(PYTHON) main.py --mode train $(TRAIN_ARGS)
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode train $(ARGS)
 
 # Model inference
 infer:
-	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference $(INFER_ARGS)
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference $(ARGS)
 
 # Build and serve documentation
 docs:

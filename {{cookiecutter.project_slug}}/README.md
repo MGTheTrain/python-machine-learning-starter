@@ -102,7 +102,7 @@ make format-and-lint
 ```sh
 make train
 # in case additional input arguments are required
-make train TRAIN_ARGS="<adjust and potentially consider additional input args, e.g. --epochs 10 --batch_size 32>"
+make train ARGS="<adjust and potentially consider additional input args, e.g. --epochs 10 --batch_size 32>"
 ```
 
 ### Model inference
@@ -110,7 +110,7 @@ make train TRAIN_ARGS="<adjust and potentially consider additional input args, e
 ```sh
 make infer
 # in case additional input arguments are required
-make infer INFER_ARGS="<adjust and potentially consider additional input args, e.g.  --checkpoint model.ckpt --batch_size 64>"
+make infer ARGS="<adjust and potentially consider additional input args, e.g. --checkpoint model.ckpt --batch_size 64>"
 ```
 
 ### Run pytests
