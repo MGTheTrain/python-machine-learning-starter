@@ -8,7 +8,7 @@ TEST_DIR = tests
 SRC_DIR = src
 
 # Commands
-.PHONY: all setup test test-individual clean train inference docs format-and-lint
+.PHONY: all setup test test-individual clean train infer docs format-and-lint help
 
 # Default target
 all: setup docs
@@ -41,15 +41,31 @@ clean:
 
 # Model training
 train:
-	cd $(SRC_DIR) && $(PYTHON) main.py --mode train
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode train $(TRAIN_ARGS)
 
 # Model inference
 infer:
-	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference
+	cd $(SRC_DIR) && $(PYTHON) main.py --mode inference $(INFER_ARGS)
 
 # Build and serve documentation
 docs:
 	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
 
+# Format and lint code
 format-and-lint:
 	cd scripts && ./format_and_lint.sh
+
+# Display help information
+help:
+	@echo "Makefile targets:"
+	@echo ""
+	@echo "all:                  Setup environment and build documentation."
+	@echo "setup:                Install dependencies from requirements.txt."
+	@echo "test:                 Run tests with coverage report."
+	@echo "test-individual:      Run a single test file (provide 'filename=test_file.py')."
+	@echo "clean:                Clean up generated files and caches."
+	@echo "train:                Train the model by running the training script. You can pass additional arguments like '--epochs 10'."
+	@echo "infer:                Run inference by executing the inference script. Pass inference-specific arguments."
+	@echo "docs:                 Build and serve the documentation with Jekyll."
+	@echo "format-and-lint:      Run formatting and linting scripts."
+	@echo "help:                 Display this help message."

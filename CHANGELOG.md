@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Updated
+
+- Renamed files and methods in the Python `src` directory. Refactored method scopes to accept datasets and models as input arguments for training and inference
+- Added a `help` target to the Makefile. Incorporated additional input arguments for the `train` and `infer` targets in the Makefile
+- Added missing `__init__.py` file in `inferences` folder
+- Overwritten CLI arguments with environment variables if they exist
+
+### Removed
+
+- Removed references in project template's `README.md`
+
 ## [0.2.1] - 07-02-2025
 
 ### Fixed

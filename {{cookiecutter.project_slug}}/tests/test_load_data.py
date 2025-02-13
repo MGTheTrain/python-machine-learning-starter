@@ -5,9 +5,9 @@ from src.data_loaders.mnist_data_loader import MNISTDataLoader
 
 
 class TestLoadData(unittest.TestCase):
-    def test_load_data(self):
+    def test_load(self):
         data_loader = MNISTDataLoader()
-        (x_train, y_train), (x_test, y_test) = data_loader.load_data()
+        (x_train, y_train), (x_test, y_test) = data_loader.load()
 
         # Check data shapes
         self.assertEqual(x_train.shape, (60000, 28, 28, 1))
@@ -26,9 +26,9 @@ import torch
 from src.data_loaders.mnist_data_loader import MNISTDataLoader
 
 class TestLoadData(unittest.TestCase):
-    def test_load_data(self):
+    def test_load(self):
         data_loader = MNISTDataLoader()
-        (x_train, y_train), (x_test, y_test) = data_loader.load_data()
+        (x_train, y_train), (x_test, y_test) = data_loader.load()
 
         # Check data shapes
         self.assertEqual(x_train.shape, torch.Size([60000, 1, 28, 28]))

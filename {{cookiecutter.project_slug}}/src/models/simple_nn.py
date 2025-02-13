@@ -1,11 +1,11 @@
 {% if cookiecutter.ml_framework == 'tensorflow' %}
 
 from tensorflow.keras import layers, models
-from models.model_builder_interface import ModelBuilderInterface
+from models.model_interface import ModelInterface
 
 
-class SimpleModelBuilder(ModelBuilderInterface):
-    def build_model(self):
+class SimpleNN(ModelInterface):
+    def build(self):
         model = models.Sequential(
             [
                 layers.Flatten(input_shape=(28, 28)),
@@ -18,12 +18,11 @@ class SimpleModelBuilder(ModelBuilderInterface):
 
 {% elif cookiecutter.ml_framework == 'pytorch' %}
 
-import torch
 import torch.nn as nn
-from models.model_builder_interface import ModelBuilderInterface
+from models.model_interface import ModelInterface
 
-class SimpleModelBuilder(ModelBuilderInterface):
-    def build_model(self):
+class SimpleNN(ModelInterface):
+    def build(self):
         class SimpleNN(nn.Module):
             def __init__(self):
                 super(SimpleNN, self).__init__()

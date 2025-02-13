@@ -21,15 +21,7 @@
 
 ## References
 
-- [dvc Github repository](https://github.com/iterative/dvc):
-
-"Data Version Control or DVC is a command line tool and VS Code Extension to help you develop reproducible machine learning projects:
-
-Version your data and models. Store them in your cloud storage but keep their version info in your Git repo.
-Iterate fast with lightweight pipelines. When you make changes, only run the steps impacted by those changes.
-Track experiments in your local Git repo (no servers needed).
-Compare any data, code, parameters, model, or performance plots.
-Share experiments and automatically reproduce anyone's experiment."
+/ 
 
 ## Folder structure
 
@@ -51,16 +43,16 @@ project_root/
 │   │   ├── data_loader_interface.py
 │   │   └── mnist_data_loader.py
 │   │   └── ...
-│   ├── inferences          # Inference scripts for testing the saved model
+│   ├── inferences          # Inference logic for testing the saved model
 │   │   ├── inference_interface.py
 │   │   └── mnist_inference.py
 │   │   └── ...
 │   ├── models              # Model architecture definition
 │   │   ├── __init__.py
-│   │   ├── model_builder_interface.py
-│   │   └── simple_model_builder.py
+│   │   ├── model_interface.py
+│   │   └── simple_nn.py
 │   │   └── ...
-│   ├── training            # Training scripts saving trained model
+│   ├── training            # Training logic considering loading data sets and saving the trained model
 │   │   ├── __init__.py
 │   │   ├── mnist_training.py
 │   │   └── training_interface.py
@@ -74,7 +66,7 @@ project_root/
 │
 ├── tests/                  # Test directory
 │   ├── test_model.py       
-│   ├── data_loader.py      
+│   ├── test_load.py      
 │   ├── ...      
 |
 ├── experiments/            # NOTE: Requires dvc tool. Directory for storing experiment configurations, results, and logs
@@ -98,15 +90,10 @@ project_root/
 ### Preconditions
 
 - Preferably utilize the [devcontainer.json](./.devcontainer/devcontainer.json). Therefore use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to setup the development container
-- Install pip packages. Therefore run:
+- Install pip packages and consider initial auto-formatting. Therefore run:
 
 ```sh
 make setup
-```
-
-- Consider initial auto-formatting. Therefore run: 
-
-```sh
 make format-and-lint
 ```
 
@@ -114,12 +101,16 @@ make format-and-lint
 
 ```sh
 make train
+# in case additional input arguments are required
+make train TRAIN_ARGS="<adjust and potentially consider additional input args, e.g. --epochs 10 --batch_size 32>"
 ```
 
 ### Model inference
 
 ```sh
 make infer
+# in case additional input arguments are required
+make infer INFER_ARGS="<adjust and potentially consider additional input args, e.g.  --checkpoint model.ckpt --batch_size 64>"
 ```
 
 ### Run pytests

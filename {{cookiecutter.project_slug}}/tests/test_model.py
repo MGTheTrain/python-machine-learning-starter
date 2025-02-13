@@ -1,12 +1,12 @@
 {% if cookiecutter.ml_framework == 'tensorflow' %}
 
 from tensorflow.keras import layers, models
-from src.models.simple_model_builder import SimpleModelBuilder
+from src.models.simple_nn import SimpleNN
 
 
-def test_build_model():
-    simple_model_builder = SimpleModelBuilder()
-    model = simple_model_builder.build_model()
+def test_build():
+    simple_nn = SimpleNN()
+    model = simple_nn.build()
     assert isinstance(model, models.Sequential)
     assert len(model.layers) == 3
     assert isinstance(model.layers[0], layers.Flatten)
@@ -19,11 +19,11 @@ def test_build_model():
 {% elif cookiecutter.ml_framework == 'pytorch' %}
 
 import torch
-from src.models.simple_model_builder import SimpleModelBuilder
+from src.models.simple_nn import SimpleNN
 
-def test_build_model():
-    simple_model_builder = SimpleModelBuilder()
-    model = simple_model_builder.build_model()
+def test_build():
+    simple_nn = SimpleNN()
+    model = simple_nn.build()
     
     assert isinstance(model, torch.nn.Module)
     children = list(model.children())
@@ -43,7 +43,7 @@ def test_build_model():
     assert children[3].out_features == 10
 
 if __name__ == "__main__":
-    test_build_model()
+    test_build()
     print("All tests passed!")
 
 {% endif %}
