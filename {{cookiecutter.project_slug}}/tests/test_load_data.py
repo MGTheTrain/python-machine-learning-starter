@@ -1,7 +1,7 @@
 {% if cookiecutter.ml_framework == 'tensorflow' %}
 
 import unittest
-from src.data_loaders.mnist_data_loader import MNISTDataLoader
+from data_loaders.mnist_data_loader import MNISTDataLoader
 
 
 class TestLoadData(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestLoadData(unittest.TestCase):
 
 import unittest
 import torch
-from src.data_loaders.mnist_data_loader import MNISTDataLoader
+from data_loaders.mnist_data_loader import MNISTDataLoader
 
 class TestLoadData(unittest.TestCase):
     def test_load(self):

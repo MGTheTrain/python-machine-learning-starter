@@ -1,7 +1,7 @@
 {% if cookiecutter.ml_framework == 'tensorflow' %}
 
 from tensorflow.keras import layers, models
-from src.models.simple_nn import SimpleNN
+from models.simple_nn import SimpleNN
 
 
 def test_build():
@@ -19,7 +19,7 @@ def test_build():
 {% elif cookiecutter.ml_framework == 'pytorch' %}
 
 import torch
-from src.models.simple_nn import SimpleNN
+from models.simple_nn import SimpleNN
 
 def test_build():
     simple_nn = SimpleNN()
