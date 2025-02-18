@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed 
+
+- Refactored model build tests to use unittest.TestCase
+- Fixed module imports
+
 ## [0.3.0] - 13-02-2025
 
 ### Updated
