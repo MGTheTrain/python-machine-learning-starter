@@ -130,6 +130,7 @@ make test-individual filename=test_model.py
 ### Generating project documentation
 
 ```sh
+make install-gems
 make docs
 ```
 
