@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 31-03-2025
+
+### Updated
+
+- Verified that the [architecture-doc folder structure]({{cookiecutter.project_slug}}/docs/{{cookiecutter.project_slug}}/pages/architecture-doc) follows the arc42 template
+
 ## [0.3.3] - 18-02-2025
 
 ### Fixed
